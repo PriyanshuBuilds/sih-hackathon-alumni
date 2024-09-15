@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Forum - Home</title>
+    <link rel="stylesheet" href="style_logged.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lovelo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="NIT Sikkim Logo">
+                <h1>Alumni Forum</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search alumni by name...">
+            </div>
+            <div class="header-icons">
+                <a href="Home_page.html" class="icon-red"><i class="fas fa-home"></i></a>
+                <a href="messages.html" class="icon-red"><i class="fas fa-comment-dots"></i></a>
+                <a href="#profile" class="profile-icon" onclick="openModal('profile-modal')">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <a href="post.html" class="button red">Post</a>
+                <a href="donation.html" class="button red">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- Navigation Boxes -->
+            <section class="navigation-section">
+                <div class="nav-box" onclick="window.location.href='profile.html'">
+                    <i class="fas fa-user-circle"></i>
+                    <h2>Profile</h2>
+                </div>
+                <div class="nav-box" onclick="toggleDropdown('departments-dropdown')">
+                    <i class="fas fa-building"></i>
+                    <h2>Departments</h2>
+                    <div id="departments-dropdown" class="dropdown-content">
+                        <a href="Department_Civil.html">Civil Engineering</a>
+                        <a href="Department_CSE.html">Computer Science and Engineering</a>
+                        <a href="eee.html">Electrical and Electronics Engineering</a>
+                        <a href="ece.html">Electronics and Communication Engineering</a>
+                        <a href="me.html">Mechanical Engineering</a>
+                    </div>
+                </div>
+                <div class="nav-box" onclick="window.location.href='event.html'">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h2>Events</h2>
+                </div>
+                <div class="nav-box" onclick="window.location.href='connect.html'">
+                    <i class="fas fa-link"></i>
+                    <h2>Connect</h2>
+                </div>
+                <div class="nav-box"id="set" onclick="openModal('settings-modal')">
+                    <i class="fas fa-cog"></i>
+                    <h2><a href="settings.html" style="text-decoration: none;color: white;" >Settings</a></h2>
+                </div>
+            </section>
+
+            <!-- Job Openings / Important Information Feed -->
+            <section class="feed">
+                <!-- Post 1 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Job Opportunity: Software Engineer</h2>
+                            <p>Company XYZ, Posted on: August 28, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>We are looking for a talented software engineer with experience in AI & ML. Apply now to join our dynamic team!</p>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Success Story: Anisha Gupta</h2>
+                            <p>Posted on: August 25, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>Anisha Gupta from the Batch of 2020, Department of ECE, has been promoted to Senior Data Analyst at TechCorp.</p>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Job Opening: Mechanical Engineer</h2>
+                            <p>AutoWorks Ltd., Posted on: August 20, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>We are hiring a Mechanical Engineer with a passion for automotive design. Join us to work on innovative vehicle solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Success Story: Rahul Singh</h2>
+                            <p>Posted on: August 18, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>Rahul Singh, Batch of 2018, CSE, has co-founded a new AI startup that is making waves in the industry.</p>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Job Opportunity: Electrical Engineer</h2>
+                            <p>Energy Solutions, Posted on: August 15, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>Looking for an Electrical Engineer to work on innovative energy solutions. Join us and be part of the green energy revolution!</p>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="feed-item">
+                    <div class="feed-header">
+                        <i class="fas fa-user-circle feed-user-photo"></i>
+                        <div class="feed-user-info">
+                            <h2>Success Story: Priya Desai</h2>
+                            <p>Posted on: August 10, 2024</p>
+                        </div>
+                        <div class="feed-options">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                    </div>
+                    <div class="feed-caption">
+                        <p>Priya Desai, Department of Mechanical Engineering, Batch of 2017, has been recognized as one of the top innovators in the automotive industry.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sidebar Right (Suggestions) -->
+            <aside class="sidebar-right">
+                <h3>Suggestions for you</h3>
+                <ul>
+                    <li>
+                        <div class="suggestion-box">
+                            <i class="fas fa-user-circle suggestion-user-photo"></i>
+                            <div class="suggestion-user-info">
+                                <h4>Kalpana Singh</h4>
+                                <p>Department of EEE, Batch 2020</p>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="suggestion-box">
+                            <i class="fas fa-user-circle suggestion-user-photo"></i>
+                            <div class="suggestion-user-info">
+                                <h4>Rohan Verma</h4>
+                                <p>Department of CSE, Batch 2021</p>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="suggestion-box">
+                            <i class="fas fa-user-circle suggestion-user-photo"></i>
+                            <div class="suggestion-user-info">
+                                <h4>Sneha Patil</h4>
+                                <p>Department of Mechanical Engineering, Batch 2019</p>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="suggestion-box">
+                            <i class="fas fa-user-circle suggestion-user-photo"></i>
+                            <div class="suggestion-user-info">
+                                <h4>Aditya Kumar</h4>
+                                <p>Department of Civil Engineering, Batch 2022</p>
+                                <button class="follow-btn">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+</body>
+<script>
+    // Function to handle follow button click
+    function handleFollowButtonClick(event) {
+        const button = event.target;
+        if (button.tagName === 'BUTTON' && button.classList.contains('follow-btn')) {
+            if (button.textContent === 'Follow') {
+                button.textContent = 'Followed';
+                button.classList.add('followed');
+            } else {
+                button.textContent = 'Follow';
+                button.classList.remove('followed');
+            }
+        }
+    }
+
+    // Attach click event listener to the document
+    document.addEventListener('click', handleFollowButtonClick);
+</script>
+</html>

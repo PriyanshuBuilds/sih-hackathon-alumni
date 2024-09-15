@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+    font-family: 'Lovelo', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo h1 {
+    margin-left: 15px;
+    font-size: 1.8em;
+    color: #b71c1c;
+    font-weight: 700;
+}
+
+.search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #b71c1c;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(183, 28, 28, 0.4);
+    outline: none;
+}
+
+.search-bar .fa-search {
+    position: absolute;
+    right: 15px;
+    color: #b71c1c;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons a {
+    color: #fff;
+    margin-left: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.header-icons .icon-red {
+    color: #b71c1c;
+}
+
+.profile-icon i {
+    font-size: 40px;
+    color: #b71c1c;
+}
+
+.button {
+    background-color: #921b1f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #b71c1c;
+}
+
+/* Main Layout */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Navigation and Sidebar */
+.navigation-section {
+    width: 20%;
+}
+
+.nav-box {
+    background-color: #e57373;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.nav-box i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.nav-box:hover {
+    background-color: #b71c1c;
+}
+#set{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-box .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-box:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #e57373;
+}
+
+/* Feed Section */
+.feed {
+    width: 60%;
+    padding: 0 20px;
+}
+
+.feed-item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed-user-photo {
+    font-size: 50px;
+    color: #e57373;
+    margin-right: 10px;
+}
+
+.feed-user-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.feed-user-info p {
+    margin: 2px 0;
+    font-size: 0.9em;
+    color: gray;
+}
+
+.feed-caption p {
+    margin: 10px 0 0;
+}
+
+.feed-options i {
+    color: gray;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Sidebar Right (Suggestions) */
+.sidebar-right {
+    width: 20%;
+    padding-left: 20px;
+}
+
+.sidebar-right h3 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #b71c1c;
+}
+
+.sidebar-right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-user-photo {
+    font-size: 50px;
+    color: #e57373;
+    margin-right: 10px;
+}
+
+.suggestion-user-info h4 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.suggestion-user-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: gray;
+}
+
+.follow-btn {
+    background-color: #b71c1c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: #e57373;
+}

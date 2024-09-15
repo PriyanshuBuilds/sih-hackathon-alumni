@@ -1,0 +1,226 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 1.5rem;
+    color: #921b1f;
+}
+
+/* Main Layout */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 2rem;
+    color: #921b1f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Student List */
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.student-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-photo {
+    position: relative;
+}
+
+.student-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: none;
+}
+
+.student-icon {
+    font-size: 50px;
+    color: #ccc;
+    display: block;
+}
+
+.student-card .student-img[src] {
+    display: block;
+}
+
+.student-info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.student-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.student-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.student-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.follow-btn {
+    background-color: #921b1f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.follow-btn:hover {
+    background-color: #a92b2f;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+}
+
+/* Not on Portal Section */
+.not-on-portal-heading {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 1.5rem;
+    color: #921b1f;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.not-on-portal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.not-on-portal-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.not-on-portal-info {
+    flex: 1;
+}
+
+.not-on-portal-info h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.not-on-portal-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.not-on-portal-info a {
+    color: #333;
+    text-decoration: none;
+}
+
+.not-on-portal-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #921b1f;
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

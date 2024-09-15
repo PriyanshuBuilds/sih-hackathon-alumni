@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Forum - Profile</title>
+    <link rel="stylesheet" href="style_profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lovelo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="NIT Sikkim Logo">
+                <h1>Alumni Forum</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <form id="profile-form" action="pro_file.php" method="POST" enctype="multipart/form-data">
+                <div class="profile-photo">
+                    <img src="user-photo.jpg" alt="Profile Photo" id="profile-img">
+                    <i class="fas fa-user-circle" id="profile-icon"></i>
+                    <input type="file" id="upload-photo" name="profile_photo" style="display:none;" />
+                    <button type="button" id="edit-photo-btn">Edit Photo</button>
+                </div>
+
+                <div class="profile-info">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="editable" disabled />
+
+                    <label for="batch-branch">Batch and Branch</label>
+                    <input type="text" id="batch-branch" name="batch_branch" placeholder="Batch of 2020, Computer Science" class="editable" disabled />
+                </div>
+
+                <div class="profile-about">
+                    <h3>About</h3>
+                    <textarea id="about" name="about" class="editable" placeholder="Describe yourself" disabled>Passionate software engineer with a love for AI and Machine Learning.</textarea>
+                </div>
+
+                <div class="profile-contact">
+                    <h3>Contact Information</h3>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" class="editable" disabled />
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+123 456 7890" class="editable" disabled />
+
+                    <label for="linkedin">LinkedIn Profile</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" class="editable" disabled />
+                </div>
+
+                <div class="profile-company">
+                    <h3>Current Company</h3>
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="XYZ Tech" class="editable" disabled />
+
+                    <label for="position">Position</label>
+                    <input type="text" id="position" name="position" placeholder="Senior Software Engineer" class="editable" disabled />
+                </div>
+
+                <div class="profile-experience">
+                    <h3>Experience</h3>
+                    <textarea id="experience" name="experience" class="editable" placeholder="List your work experience" disabled>Software Engineer at ABC Corp (2021-2023)\nIntern at DEF Solutions (2020-2021)</textarea>
+                </div>
+
+                <button type="button" id="edit-profile-btn">Edit Profile</button>
+                <button type="submit" id="save-profile-btn" style="display:none;">Save Changes</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alumni Forum. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('edit-profile-btn').addEventListener('click', function() {
+            document.querySelectorAll('.editable').forEach(function(element) {
+                element.disabled = false;
+            });
+            document.getElementById('edit-profile-btn').style.display = 'none';
+            document.getElementById('save-profile-btn').style.display = 'inline-block';
+        });
+
+        document.getElementById('edit-photo-btn').addEventListener('click', function() {
+            document.getElementById('upload-photo').click();
+        });
+
+        document.getElementById('upload-photo').addEventListener('change', function() {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profile-img').src = e.target.result;
+                document.getElementById('profile-icon').style.display = 'none';
+                document.getElementById('profile-img').style.display = 'block';
+            };
+            reader.readAsDataURL(this.files[0]);
+        });
+
+        window.onload = function() {
+            var img = document.getElementById('profile-img');
+            var icon = document.getElementById('profile-icon');
+            
+            if (!img.getAttribute('src')) {
+                img.style.display = 'none';
+                icon.style.display = 'block';
+            } else {
+                icon.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

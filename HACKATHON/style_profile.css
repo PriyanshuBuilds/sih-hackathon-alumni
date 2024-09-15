@@ -1,0 +1,147 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 1.5rem;
+    color: #921b1f;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.profile-photo {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-photo i {
+    font-size: 150px;
+    color: #ccc;
+    display: none;
+}
+
+#edit-photo-btn {
+    margin-top: 10px;
+    background-color: #921b1f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#edit-photo-btn:hover {
+    background-color: #a92b2f;
+}
+
+.editable {
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.editable:disabled {
+    background-color: #f9f9f9;
+    color: #666;
+    border: none;
+}
+
+.profile-about, .profile-contact, .profile-company, .profile-experience {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.profile-about h3, .profile-contact h3, .profile-company h3, .profile-experience h3 {
+    font-size: 1.5rem;
+    color: #921b1f;
+    margin-bottom: 10px;
+}
+
+#edit-profile-btn, #save-profile-btn {
+    background-color: #921b1f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#edit-profile-btn:hover, #save-profile-btn:hover {
+    background-color: #a92b2f;
+}
+
+.profile-experience ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #921b1f;
+    color: white;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style_home.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="https://nitsikkim.ac.in/" target="_blank"><img src="logo.png" alt="NIT Sikkim Logo"></a>
+
+                <h1>National Institute of Technology Sikkim <br>Alumni Forum</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="Home_page.html" class="login-button">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="login-button">About</a>
+                    </li>
+                    <li><a href="https://forms.gle/XzXgmGVesrdoyMm37" class="login-button">Feedback</a></li>
+                    <li> <a href="http://localhost/HACKATHON/index.html" class="login-button">Connect</a></li>
+                    <!-- <li><a href="#home">Home</a></li> -->
+                    <!-- <li>
+                        <a href="Home_page.html"><button type="button" class="btn btn-danger"
+                                style="padding:  10px 20px;">Home</button></a>
+
+                    </li> -->
+                    <!-- <li><a href="#about">About</a></li> -->
+                    <!-- <li>
+                        <button type="button" class="btn btn-danger" style="padding:  10px 20px;">About</button>
+                    </li>
+
+                    </li> -->
+                    <!-- <li><a href="C:\Users\Hp\Documents\Alumni\feedback.html">Feedback</a></li> -->
+                    <!-- <li>
+                        <a href="https://forms.gle/XzXgmGVesrdoyMm37"><button type="button" class="btn btn-danger"
+                                style="padding:  10px 10px;" style="margin: 0 0 0 10px;">Feedback</a></button></a>
+                        <!-- <button type="button" class="btn btn-danger" style="padding:  10px 20px;"
+                            style="margin: 0 0 0 10px;">Feedback</a></button> -->
+                    <!-- </li>  -->
+                </ul>
+            </nav>
+            <!-- <a href="index (1).html" class="login-button">Connect</a> -->
+            <!-- <button type="button" class="btn btn-danger"><a href="index (1).html">Login</a>Login</button> -->
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero" style="background-image: url(hill_nit.jpeg);">
+            <div class="hero-content">
+                <h2>About Alumni Forum</h2>
+                <p>
+                    Welcome to the official Alumni Forum of the National Institute of Technology Sikkim! Our community
+                    is a vibrant network of past and present students, dedicated to fostering lifelong connections,
+                    professional development, and the spirit of giving back to our alma mater.
+
+                </p>
+
+                <h2>Our Mission</h2>
+                <p>
+                    The NIT Sikkim Alumni Forum aims to unite all former students under a single platform, enabling them
+                    to stay connected with each other and the institute. We strive to facilitate networking
+                    opportunities, support ongoing education, and contribute to the overall growth and success of NIT
+                    Sikkim.
+                </p>
+                <h3>Contact Us:</h3>
+                <h4>info@nitsikkim.ac.in</h4>
+
+
+
+            </div>
+        </section>
+
+        <!-- <section class="showcase-grid">
+
+            <div class="grid-item">
+                <img src="Untitled design.png" alt="Event 1">
+                <div class="overlay">
+                    <h2>Annual Alumni Meet</h2>
+                    <p>Join us for the grand annual meet on September 15, 2024.</p>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <img src="award.jpg" alt="Alumni Achievement 1">
+                <div class="overlay">
+                    <h2>Alumni Achievement</h2>
+                    <p>John Doe wins the Best Entrepreneur of the Year award.</p>
+                </div>
+            </div>
+
+
+            <div class="grid-item">
+                <img src="webinar.jpg" alt="">
+                <div class="overlay">
+                    <h2>Webinar on Career Growth</h2>
+                    <p>Exclusive webinar by industry leaders on October 22, 2024.</p>
+                </div>
+            </div>
+
+            <!-- <div class="grid-item">
+                <img src="achievement2.jpg" alt="Alumni Achievement 2">
+                <div class="overlay">
+                    <h2>Alumni Spotlight</h2>
+                    <p>Jane Smith recognized for her contributions to technology.</p>
+                </div>
+            </div> -->
+
+        </section> -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alumni Association. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const heading = document.querySelector('.hero-content h2');
+            const text = heading.textContent;
+            heading.textContent = '';
+            let index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    heading.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 100); // Adjust speed by changing the timeout value
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navItems = document.querySelectorAll('nav ul li');
+
+            navItems.forEach((item, index) => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateX(-30px)';
+
+                setTimeout(() => {
+                    item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    item.style.opacity = 1;
+                    item.style.transform = 'translateX(0)';
+                }, 100 * index); // Delay each item by 100ms to create a staggered effect
+            });
+        });
+    </script>
+
+</body>
+
+</html>
